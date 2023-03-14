@@ -16,4 +16,16 @@
 #  6 12 18 24 30 36
 # с одним циклом попробовать 
 
+num_rows = int(input("enter the number of rows: "))
+num_columns = int(input("enter the number of columns: "))
+
 def print_operation_table(operation, num_rows, num_columns):
+    for x in range(1, num_rows + 1):
+        numbers = []
+        for y in range(1, num_columns + 1):
+            numbers.append(str(operation(x, y)))
+        print(" ".join(numbers))
+
+
+
+print_operation_table(lambda x, y: x * y, num_rows, num_columns) 
